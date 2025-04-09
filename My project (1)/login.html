@@ -1,43 +1,126 @@
-
 <!DOCTYPE html>
-<html>
-
+<html lang="nl">
 <head>
-    <title>HTML Login Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
-</head>
+   
+    <style>
 
-<body>
-    <div class="main">
-        <h1>Login Pagina</h1>
-        <h3>Enter your login credentials</h3>
-
-        <form action="">
-            <label for="first">
-                Username:
-            </label>
-            <input type="text" id="first" name="first" 
-                placeholder="Enter your Username" required>
-
-            <label for="password">
-                Password:
-            </label>
-            <input type="password" id="password" name="password" 
-                placeholder="Enter your Password" required>
-
-            <div class="wrap">
-                <button type="submit">
-                    Submit
-                </button>
-            </div>
-        </form>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+        }
         
-        <p>Not registered?
-            <a href="#" style="text-decoration: none;">
-                Create an account
-            </a>
-        </p>
-    </div>
-</body>
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .login-container {
+            max-width: 600px;
+            margin: 80px auto;
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        label {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            padding: 15px;
+            font-size: 1.1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 30px;
+                margin: 40px 15px;
+            }
+        }
+        </style>
 
+        
+</head>
+<body>
+
+    <nav>
+        <a href="login.html">LOGIN</a>
+        <a href="menu.html">MENU</a>
+        <a href="#">ORDER ONLINE</a>
+        <a href="#">GIFT VOUCHER</a>
+        <a href="#">HOME</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <div class="login-container">
+        <h1>Inloggen</h1>
+
+        <form action="#" method="post">
+            <div>
+                <label for="username">Gebruikersnaam</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div>
+                <label for="password">Wachtwoord</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
 </html>
