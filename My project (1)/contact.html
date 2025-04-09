@@ -5,23 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 60px auto;
+            background-color: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        label {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 15px;
+            font-size: 1.1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 30px;
+                margin: 30px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <nav>
+        <a href="login.html">LOGIN</a>
+        <a href="menu.html">MENU</a>
+        <a href="#">ORDER ONLINE</a>
+        <a href="#">GIFT VOUCHER</a>
+        <a href="#">HOME</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
     <div class="contact-container">
-        <h1>Contact us</h1>
-    
-        <form>
-            <label for="name">Naam</label>
-            <input type="text" id="name" required>
+        <h1>Contacteer Ons</h1>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" required>
+        <form action="#" method="post">
+            <div>
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-            <label for="message">Bericht</label>
-            <textarea id="message" rows="4" required></textarea>
+            <div>
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="message">Bericht</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
 
             <button type="submit">Verstuur</button>
         </form>
     </div>
+
 </body>
 </html>
+
