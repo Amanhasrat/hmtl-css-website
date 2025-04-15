@@ -7,7 +7,7 @@ body {
   
   
   .background {
-    background-image: url(https://img.freepik.com/premium-photo/elegant-select-restaurant-table_700226-3252.jpg); /* Gebruik je eigen afbeelding hier */
+    background-image: url(https://img.freepik.com/premium-photo/elegant-select-restaurant-table_700226-3252.jpg); 
     background-size: cover;
     background-position: center;
     min-height: 100vh;
