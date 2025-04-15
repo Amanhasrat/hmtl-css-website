@@ -37,3 +37,9 @@ footer {
     background-color: #f1f1f1;
     margin-top: 40px;
 }
+
+@media (max width: 1024px)
+    .grid-container { 
+        grid-template-columns: repeat(1fr);
+
+}
